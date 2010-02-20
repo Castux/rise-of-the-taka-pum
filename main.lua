@@ -16,6 +16,10 @@ require "evol"
 
 require "game"
 
+-- Shortcuts
+
+TI = table.insert
+
 -- Set it up
 
 evol.init(700,430)
