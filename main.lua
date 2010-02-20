@@ -18,7 +18,17 @@ require "game"
 
 -- Set it up
 
-evol.init(700,350)
+evol.init(700,430)
+
+-- Load stuff
+
+img = {
+	drummer0 = evol.loadImage("img/drummer.png"),
+	drummer1 = evol.loadImage("img/drummer1.png"),
+	drummer2 = evol.loadImage("img/drummer2.png"),
+	drummer3 = evol.loadImage("img/drummer3.png"),
+	drummer4 = evol.loadImage("img/drummer4.png"),
+}
 
 function main()
 
@@ -26,7 +36,7 @@ function main()
 
 	while not quit do	
 		
-		local dt,fps,t = evol.timer(25)
+		local dt,fps,t = evol.timer()
 		
 		evol.input {
 			gameMode.keydown
