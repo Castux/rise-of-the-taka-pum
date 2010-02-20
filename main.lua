@@ -30,6 +30,11 @@ img = {
 	drummer4 = evol.loadImage("img/drummer4.png"),
 }
 
+snd = {}
+for i = 1,4 do
+	snd["drum" .. i] = evol.loadSound("snd/drum" .. i .. ".ogg")
+end
+
 function main()
 
 	quit = false

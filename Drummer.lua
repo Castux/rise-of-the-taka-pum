@@ -35,4 +35,6 @@ function Drummer:hit(n)
 	self.state = n
 	self.timer = 0.20
 	
+	snd["drum" .. n]:play()
+	
 end
