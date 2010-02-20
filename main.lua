@@ -1,5 +1,4 @@
--- revenge.lua -- Revenge of the Orange
--- Copyright (C) 2008 Noé Falzon
+-- Copyright (C) 2009 Noé Falzon <firstname.lastname@aliceadsl.fr>
 
 -- This program is  free software:  you can redistribute it and/or modify it
 -- under  the terms  of the  GNU General Public License  as published by the
@@ -13,33 +12,41 @@
 -- You should have received a copy of the  GNU General Public License  along
 -- with this program. If not, see <http://www.gnu.org/licenses/>.
 
-
 require "evol"
 
--- All the super globals
+require "game"
 
-evol.init(700,430)
-evol.showCursor(false)
+-- Set it up
 
--- Main loop
+evol.init(700,350)
 
+function main()
 
-quit = false
+	quit = false
 
-while not quit do	
-	
-	dt,fps,ticks = evolcore.timer()
-	
-	print(evol.key_escape)
-	
-	evol.input {
-		function(key)
-			if key == evol.key_escape then quit = true end
+	while not quit do	
+		
+		local dt,fps,t = evol.timer(25)
+		
+		evol.input {
+			gameMode.keydown
+		}
+		
+		if gameMode.update then
+			gameMode.update(dt,fps,t)
 		end
-	}
-	
-	
-	evol.flip()		
+		
+		evol.flip()
+	end
+
+	evol.quit()
 end
 
-evol.quit()
+-- Game mode manager
+setGameMode = function(mode)
+	gameMode = mode
+	mode.init()
+end
+
+setGameMode(game)
+main()
