@@ -10,8 +10,9 @@ game.init = function()
 	
 	game.pons1 = {}
 	
-	for i=1,10 do
-		TI(game.pons1, Pon(math.random()*200+20,1))
+	for i=1,5 do
+		TI(game.pons1, Pon(math.random()*200+20,'spike',1))
+		TI(game.pons1, Pon(math.random()*200+20,'bow',1))
 	end
 	
 end

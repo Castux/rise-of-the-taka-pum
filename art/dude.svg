@@ -62,9 +62,9 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="341.88079"
-     inkscape:cy="190.98043"
+     inkscape:zoom="1"
+     inkscape:cx="160.0556"
+     inkscape:cy="99.367625"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -93,8 +93,8 @@
        id="rect4498"
        width="700"
        height="420"
-       x="128.92464"
-       y="-24.332577"
+       x="124.92464"
+       y="-32.332577"
        rx="0"
        ry="0"
        inkscape:export-filename="/home/tenoch/minild/concept.png"
@@ -102,9 +102,10 @@
        inkscape:export-ydpi="90" />
     <g
        id="g4470"
-       transform="matrix(0.4120904,0,0,0.4120904,102.77968,-18.435256)"
-       inkscape:export-xdpi="180"
-       inkscape:export-ydpi="180">
+       transform="matrix(0.4120904,0,0,0.4120904,81.566476,-195.21195)"
+       inkscape:export-xdpi="89.714417"
+       inkscape:export-ydpi="89.714417"
+       inkscape:export-filename="/home/tenoch/minild/art/pon1.png">
       <g
          transform="translate(-45,-22.142857)"
          id="g3161">
@@ -454,7 +455,10 @@
     </g>
     <g
        id="g5171"
-       transform="matrix(2,0,0,2,-160.96146,-451.79676)">
+       transform="matrix(2,0,0,2,-197.96146,-611.79676)"
+       inkscape:export-filename="/home/tenoch/minild/art/ponbow11.png"
+       inkscape:export-xdpi="90.180969"
+       inkscape:export-ydpi="90.180969">
       <g
          id="g5165">
         <path
@@ -760,9 +764,10 @@
     </g>
     <g
        id="g5282"
-       transform="matrix(0.4120904,0,0,0.4120904,143.55102,-14.756116)"
-       inkscape:export-xdpi="180"
-       inkscape:export-ydpi="180">
+       transform="matrix(0.4120904,0,0,0.4120904,133.19316,-194.37596)"
+       inkscape:export-xdpi="89.626076"
+       inkscape:export-ydpi="89.626076"
+       inkscape:export-filename="/home/tenoch/minild/art/pon2.png">
       <g
          transform="translate(-45,-22.142857)"
          id="g5284">
@@ -855,7 +860,10 @@
     </g>
     <g
        id="g5316"
-       transform="matrix(2,0,0,2,-123.76045,-447.20339)">
+       transform="matrix(2,0,0,2,-136.76045,-610.20339)"
+       inkscape:export-filename="/home/tenoch/minild/art/ponbow12.png"
+       inkscape:export-xdpi="90.180969"
+       inkscape:export-ydpi="90.180969">
       <g
          id="g5318">
         <path
@@ -984,7 +992,10 @@
     </g>
     <g
        id="g5402"
-       transform="matrix(2,0,0,2,23.075124,-119.85816)">
+       transform="matrix(2,0,0,2,-100.92488,-117.85816)"
+       inkscape:export-filename="/home/tenoch/minild/art/ponbow13.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <g
          id="g5352"
          transform="translate(-8.5,1.0025133e-8)">
@@ -1053,7 +1064,7 @@
     </g>
     <g
        id="g5413"
-       transform="matrix(2,0,0,2,-39.588872,-449.71097)">
+       transform="matrix(2,0,0,2,-306.58887,-728.71097)">
       <g
          transform="translate(-8.5,1.0025133e-8)"
          id="g5415">
@@ -1788,6 +1799,80 @@
          id="path5823"
          d="M 188.99122,303.27515 L 352.01428,291.27986"
          style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Send);stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <g
+       id="g3505"
+       inkscape:export-filename="/home/tenoch/minild/art/ponspike13.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <g
+         transform="matrix(0.4120904,0,0,0.4120904,209.86481,299.43988)"
+         id="g3479">
+        <path
+           sodipodi:nodetypes="cs"
+           id="path3481"
+           d="M 232.42929,327.8736 C 230.93209,328.79496 247.628,360.28647 257.68311,364.74416"
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="M 209.60665,325.05236 C 211.10385,325.97372 194.40794,357.46523 184.35283,361.92292"
+           id="path3483"
+           sodipodi:nodetypes="cs" />
+        <path
+           sodipodi:type="arc"
+           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="path3485"
+           sodipodi:cx="222.73863"
+           sodipodi:cy="303.33408"
+           sodipodi:rx="9.5964489"
+           sodipodi:ry="9.5964489"
+           d="M 232.33508,303.33408 A 9.5964489,9.5964489 0 1 1 213.14218,303.33408 A 9.5964489,9.5964489 0 1 1 232.33508,303.33408 z"
+           transform="matrix(3.8947369,0,0,3.8947369,-644.76974,-878.07235)" />
+        <path
+           transform="matrix(2,0,0,2,-225.26401,-294.74778)"
+           d="M 232.33508,303.33408 A 9.5964489,9.5964489 0 1 1 213.14218,303.33408 A 9.5964489,9.5964489 0 1 1 232.33508,303.33408 z"
+           sodipodi:ry="9.5964489"
+           sodipodi:rx="9.5964489"
+           sodipodi:cy="303.33408"
+           sodipodi:cx="222.73863"
+           id="path3487"
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           sodipodi:type="arc" />
+      </g>
+      <g
+         id="g3497"
+         transform="matrix(1.5289306,-0.946001,1.7951398,2.901312,-523.99519,-75.509619)">
+        <path
+           transform="matrix(1.1001832,0,0,0.997041,-22.020532,-133.10381)"
+           d="M 255.75,387.36218 A 7.25,8 0 1 1 241.25,387.36218 A 7.25,8 0 1 1 255.75,387.36218 z"
+           sodipodi:ry="8"
+           sodipodi:rx="7.25"
+           sodipodi:cy="387.36218"
+           sodipodi:cx="248.5"
+           id="path3499"
+           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           sodipodi:type="arc" />
+        <path
+           sodipodi:type="arc"
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="path3501"
+           sodipodi:cx="248.5"
+           sodipodi:cy="387.36218"
+           sodipodi:rx="7.25"
+           sodipodi:ry="8"
+           d="M 255.75,387.36218 A 7.25,8 0 1 1 241.25,387.36218 A 7.25,8 0 1 1 255.75,387.36218 z"
+           transform="matrix(0.6795249,0,0,0.6158194,82.513054,14.567009)" />
+        <path
+           transform="matrix(0.3346973,0,0,0.3033194,168.20271,135.61768)"
+           d="M 255.75,387.36218 A 7.25,8 0 1 1 241.25,387.36218 A 7.25,8 0 1 1 255.75,387.36218 z"
+           sodipodi:ry="8"
+           sodipodi:rx="7.25"
+           sodipodi:cy="387.36218"
+           sodipodi:cx="248.5"
+           id="path3503"
+           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           sodipodi:type="arc" />
+      </g>
     </g>
   </g>
 </svg>

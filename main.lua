@@ -34,14 +34,29 @@ img = {
 	drummer3 = evol.loadImage("img/drummer3.png"),
 	drummer4 = evol.loadImage("img/drummer4.png"),
 	
-	pon1 = evol.loadImage("img/pon1.png"),
-	pon2 = evol.loadImage("img/pon2.png"),
+	ponspike11 = evol.loadImage("img/ponspike11.png"),
+	ponspike12 = evol.loadImage("img/ponspike12.png"),
+	ponspike13 = evol.loadImage("img/ponspike13.png"),
+	
+	ponbow11 = evol.loadImage("img/ponbow11.png"),
+	ponbow12 = evol.loadImage("img/ponbow12.png"),
+	ponbow13 = evol.loadImage("img/ponbow13.png"),
 }
 
-img.pon1.cx = 17
-img.pon2.cx = 17
-img.pon1.cy = img.pon1.h
-img.pon2.cy = img.pon2.h
+img.ponspike11.cx = 17
+img.ponspike12.cx = 17
+img.ponspike13.cx = 17
+img.ponspike11.cy = img.ponspike11.h
+img.ponspike12.cy = img.ponspike12.h
+img.ponspike13.cy = img.ponspike13.h
+
+
+img.ponbow11.cx = 17
+img.ponbow12.cx = 17
+img.ponbow13.cx = 17
+img.ponbow11.cy = img.ponbow11.h
+img.ponbow12.cy = img.ponbow12.h
+img.ponbow13.cy = img.ponbow13.h
 
 snd = {}
 for i = 1,4 do
