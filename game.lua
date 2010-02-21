@@ -1,11 +1,19 @@
 require "Drummer"
+require "Pon"
 
 game = {}
 
 game.init = function()
 	
-	game.drummer1 = Drummer(70,50)
-	game.drummer2 = Drummer(630,50)
+	game.drummer1 = Drummer(70,50,1)
+	game.drummer2 = Drummer(630,50,2)
+	
+	game.pons1 = {}
+	
+	for i=1,10 do
+		TI(game.pons1, Pon(math.random()*200+20,1))
+	end
+	
 end
 
 game.update = function(dt,fps,ticks)
@@ -15,13 +23,21 @@ game.update = function(dt,fps,ticks)
 	game.drummer1:update(dt)
 	game.drummer2:update(dt)
 	
+	for i,v in ipairs(game.pons1) do
+		v:update(dt)
+	end
+	
 	
 	-- Draw
 	
-	evol.fill({99,0,0})
+	evol.fill({153,0,0})
 	
 	game.drummer1:draw()
 	game.drummer2:draw()
+	
+	for i,v in ipairs(game.pons1) do
+		v:draw()
+	end
 	
 end
 
@@ -47,4 +63,11 @@ game.keydown = function(key)
 		game.drummer2:hit(4)
 	end
 	
+end
+
+game.launch = function(action, team)
+	
+	for i,v in ipairs(game["pons"..team]) do
+		v:launch(action)
+	end
 end

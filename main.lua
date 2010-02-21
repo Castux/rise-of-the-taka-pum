@@ -19,6 +19,7 @@ require "game"
 -- Shortcuts
 
 TI = table.insert
+rand = function(x) return (math.random()*x) end
 
 -- Set it up
 
@@ -32,7 +33,15 @@ img = {
 	drummer2 = evol.loadImage("img/drummer2.png"),
 	drummer3 = evol.loadImage("img/drummer3.png"),
 	drummer4 = evol.loadImage("img/drummer4.png"),
+	
+	pon1 = evol.loadImage("img/pon1.png"),
+	pon2 = evol.loadImage("img/pon2.png"),
 }
+
+img.pon1.cx = 17
+img.pon2.cx = 17
+img.pon1.cy = img.pon1.h
+img.pon2.cy = img.pon2.h
 
 snd = {}
 for i = 1,4 do

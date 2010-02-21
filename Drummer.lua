@@ -3,19 +3,25 @@ require "class"
 Drummer = class()
 
 patterns = {
-	["1121"] = {0,1,2,3},
-	["2121"] = {0,1,2,3},
-	["13134"] = {0, 1.5, 2, 2.5, 3},
+	["1121"] = {{0,1,2,3}, 'march'},
+	["2221"] = {{0,1,2,3}, 'retreat'},
+
+	["131"] = {{0, 1.5, 2}, 'attack'},
+	["1331"] = {{0, 1, 1.5, 2}, 'protect'},
+	["3131"] = {{0, 0.75, 1.5, 2}, 'whatever'},
+
+	["43131"] = {{0, 1.5, 2, 2.5, 3}, 'awesome'}
 }
 
 beat = 0.5	-- sec per beat
 precision = 1/8
 
 
-function Drummer:init(x,y)
+function Drummer:init(x,y,team)
 	
 	self.x = x
 	self.y = y
+	self.team = team
 	
 	self.state = 0
 	self.timer = 0
@@ -89,25 +95,28 @@ end
 function Drummer:check_pattern()
 	print(self.pattern, table.concat(self.times,","))
 	
-	local ref = patterns[self.pattern]
+	local pattern = patterns[self.pattern]
 	
-	if ref then
+	if not pattern then return end
+	
+
+	-- check timing precision
+	local ref = pattern[1]
+	local correct = true
+	for i,v in ipairs(self.times) do
 		
-		-- check precision
-		local correct = true
-		for i,v in ipairs(self.times) do
-			
-			correct = correct and math.abs(v - ref[i]) < precision
-		end
-		
-		-- launch action
-		if correct then
-			print "Correct!"
-		else
-			print "Fail!"
-		end
-		
-		-- reset
-		self:reset_pattern()
+		correct = correct and math.abs(v - ref[i]) < precision
 	end
+	
+	-- launch action
+	if correct then
+		print ("Correct! " .. pattern[2])
+		game.launch(pattern[2], self.team)
+	else
+		print "Fail!"
+	end
+	
+	-- reset
+	self:reset_pattern()
+
 end
