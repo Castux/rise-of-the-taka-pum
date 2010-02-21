@@ -37,19 +37,23 @@ img = {
 	ponspike11 = evol.loadImage("img/ponspike11.png"),
 	ponspike12 = evol.loadImage("img/ponspike12.png"),
 	ponspike13 = evol.loadImage("img/ponspike13.png"),
+	ponspike14 = evol.loadImage("img/ponspike14.png"),
 	
 	ponbow11 = evol.loadImage("img/ponbow11.png"),
 	ponbow12 = evol.loadImage("img/ponbow12.png"),
 	ponbow13 = evol.loadImage("img/ponbow13.png"),
+	
+	arrow11 =  evol.loadImage("img/arrow11.png"),
 }
 
 img.ponspike11.cx = 17
 img.ponspike12.cx = 17
 img.ponspike13.cx = 17
+img.ponspike14.cx = 17
 img.ponspike11.cy = img.ponspike11.h
 img.ponspike12.cy = img.ponspike12.h
 img.ponspike13.cy = img.ponspike13.h
-
+img.ponspike14.cy = img.ponspike14.h
 
 img.ponbow11.cx = 17
 img.ponbow12.cx = 17

@@ -1,5 +1,6 @@
 require "Drummer"
 require "Pon"
+require "Arrow"
 
 game = {}
 
@@ -15,6 +16,8 @@ game.init = function()
 		TI(game.pons1, Pon(math.random()*200+20,'bow',1))
 	end
 	
+	game.arrows = {}
+	
 end
 
 game.update = function(dt,fps,ticks)
@@ -28,6 +31,15 @@ game.update = function(dt,fps,ticks)
 		v:update(dt)
 	end
 	
+	local i = 1
+	while i <= #game.arrows do
+		local die = game.arrows[i]:update(dt)
+		if die then
+			table.remove(game.arrows, i)
+		else
+			i = i + 1
+		end
+	end
 	
 	-- Draw
 	
@@ -38,6 +50,10 @@ game.update = function(dt,fps,ticks)
 	
 	for i,v in ipairs(game.pons1) do
 		v:draw()
+	end
+	
+	for i,v in ipairs(game.arrows) do
+		v:draw(dt)
 	end
 	
 end
@@ -71,4 +87,10 @@ game.launch = function(action, team)
 	for i,v in ipairs(game["pons"..team]) do
 		v:launch(action)
 	end
+end
+
+game.add_arrow = function(x,y,dist)
+	
+	TI(game.arrows, Arrow(x,y,dist))
+	
 end
