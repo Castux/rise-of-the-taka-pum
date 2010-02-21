@@ -31,6 +31,16 @@ end
 
 function Arrow:draw()
 	
-	img.arrow11:blit(self.x,self.y)
+	local sprite
+	
+	if math.abs(self.vy) < 300 then
+		sprite = img.arrow12
+	elseif self.vy > 0 then
+		sprite = img.arrow13
+	else
+		sprite = img.arrow11
+	end
+	
+	sprite:blit(self.x,self.y)
 	
 end

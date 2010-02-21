@@ -44,6 +44,8 @@ img = {
 	ponbow13 = evol.loadImage("img/ponbow13.png"),
 	
 	arrow11 =  evol.loadImage("img/arrow11.png"),
+	arrow12 =  evol.loadImage("img/arrow12.png"),
+	arrow13 =  evol.loadImage("img/arrow13.png"),
 }
 
 img.ponspike11.cx = 17

@@ -62,9 +62,9 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="160.0556"
-     inkscape:cy="99.367625"
+     inkscape:zoom="4"
+     inkscape:cx="232.75505"
+     inkscape:cy="-63.581389"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -913,10 +913,11 @@
       </g>
     </g>
     <g
-       inkscape:export-ydpi="180"
-       inkscape:export-xdpi="180"
-       transform="matrix(0.4120904,0,0,0.4120904,76.408884,197.56474)"
-       id="g5336">
+       inkscape:export-ydpi="90.485878"
+       inkscape:export-xdpi="90.485878"
+       transform="matrix(0.4120904,0,0,0.4120904,77.408884,295.56474)"
+       id="g5336"
+       inkscape:export-filename="/home/tenoch/minild/art/ponspike14.png">
       <g
          id="g5338"
          transform="translate(-45,-22.142857)">
@@ -1874,5 +1875,26 @@
            sodipodi:type="arc" />
       </g>
     </g>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Send);stroke-opacity:1"
+       d="M 289.77618,524.02362 L 315.44156,505.51159"
+       id="path3534"
+       inkscape:export-filename="/home/tenoch/minild/art/arrow11.png"
+       inkscape:export-xdpi="88.803268"
+       inkscape:export-ydpi="88.803268" />
+    <path
+       inkscape:export-ydpi="80.001083"
+       inkscape:export-xdpi="80.001083"
+       inkscape:export-filename="/home/tenoch/minild/img/arrow12.png"
+       id="path3548"
+       d="M 320.98369,513.683 L 352.62821,513.50616"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Send);stroke-opacity:1" />
+    <path
+       inkscape:export-ydpi="88.803268"
+       inkscape:export-xdpi="88.803268"
+       inkscape:export-filename="/home/tenoch/minild/art/arrow13.png"
+       id="path3550"
+       d="M 363.15843,505.59416 L 388.82381,524.10619"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Send);stroke-opacity:1" />
   </g>
 </svg>

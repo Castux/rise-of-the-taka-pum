@@ -112,7 +112,7 @@ function Pon:launch(action)
 		self.state = 'attacking'
 		self.target = self.x + 100 + rand(20)
 		self.bowtimer = rand(1)
-		self.timer = rand(3)
+		self.timer = 3
 		
 	end
 end
@@ -123,9 +123,13 @@ function Pon:bow_attack(dt)
 	if self.bowtimer < 0 then
 		game.add_arrow(self.x,400 - 40,400)
 		
-		self.bowtimer = 1 + rand(1)
+		self.bowtimer = rand(1)
 	end
 	
+	self.timer = self.timer - dt
+	if self.timer < 0 then
+		self.state = 'idle'
+	end
 	
 end
 
