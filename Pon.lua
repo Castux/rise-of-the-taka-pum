@@ -176,6 +176,16 @@ function Pon:launch(action)
 			self:launch('retreat')
 		end
 	
+	elseif action == 'protect-spike' then
+		if self.kind == 'spike' then
+			self:launch('protect')
+		end
+	
+	elseif action == 'protect-bow' then
+		if self.kind == 'bow' then
+			self:launch('protect')
+		end
+	
 	elseif action == 'heal' then
 		self:heal()
 		

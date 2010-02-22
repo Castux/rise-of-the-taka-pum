@@ -28,7 +28,7 @@ game.init = function()
 	game.arrows = {}
 	
 	-- pick a random background
-	game.bg = img["bg" .. math.random(3)]
+	game.bg = math.random(3)
 
 end
 
@@ -110,10 +110,9 @@ end
 
 game.draw = function(shift,surf)
 
-	--evol.fill({153,0,0},nil,surf)
-	game.bg:blit(-shift,0,surf)
+	img["bg"..game.bg]:blit(-shift,0,surf)
 	
-	
+
 	for i,v in ipairs(game.pons1) do
 		v:draw(shift,surf)
 	end
@@ -156,6 +155,9 @@ game.launch = function(action, team)
 	
 	if action == 'spawn' then
 		game.spawn(4,4,team,true)
+		return
+	elseif action == 'sun' then
+		game.bg = game.bg % 3 + 1
 		return
 	end
 	
