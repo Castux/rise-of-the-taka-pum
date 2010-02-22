@@ -116,7 +116,7 @@ function Pon:draw(shift,surf)
 	end
 	
 	if self.special then
-		self.special:blit(self.x-shift,self.y-20,surf)
+		self.special:blit(self.x-shift + rand(3),self.y-25+rand(3),surf)
 	end
 	
 	sprite:blit(self.x-shift,self.y,surf)
@@ -176,6 +176,10 @@ function Pon:launch(action)
 			self:launch('retreat')
 		end
 	
+	elseif action == 'heal' then
+		self:heal()
+		
+		
 	end
 end
 
@@ -223,4 +227,11 @@ function Pon:hit(hit)
 		self.special = img["blood" .. math.random(3)]
 		self.spe_timer = 0.2
 	end
+end
+
+function Pon:heal()
+
+	self.hp = 100
+	self.special = img.heal
+	self.spe_timer = 2
 end

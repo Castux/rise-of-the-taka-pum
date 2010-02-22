@@ -68,6 +68,8 @@ img = {
 	blood1 = evol.loadImage("img/blood1.png"),
 	blood2 = evol.loadImage("img/blood2.png"),
 	blood3 = evol.loadImage("img/blood3.png"),
+	
+	heal = evol.loadImage("img/heal.png"),
 }
 
 img.ponspike11.cx = 17
