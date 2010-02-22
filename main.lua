@@ -39,13 +39,26 @@ img = {
 	ponspike13 = evol.loadImage("img/ponspike13.png"),
 	ponspike14 = evol.loadImage("img/ponspike14.png"),
 	
+	ponspike21 = evol.loadImage("img/ponspike21.png"),
+	ponspike22 = evol.loadImage("img/ponspike22.png"),
+	ponspike23 = evol.loadImage("img/ponspike23.png"),
+	ponspike24 = evol.loadImage("img/ponspike24.png"),
+	
 	ponbow11 = evol.loadImage("img/ponbow11.png"),
 	ponbow12 = evol.loadImage("img/ponbow12.png"),
 	ponbow13 = evol.loadImage("img/ponbow13.png"),
 	
+	ponbow21 = evol.loadImage("img/ponbow21.png"),
+	ponbow22 = evol.loadImage("img/ponbow22.png"),
+	ponbow23 = evol.loadImage("img/ponbow23.png"),
+	
 	arrow11 =  evol.loadImage("img/arrow11.png"),
 	arrow12 =  evol.loadImage("img/arrow12.png"),
 	arrow13 =  evol.loadImage("img/arrow13.png"),
+	
+	arrow21 =  evol.loadImage("img/arrow21.png"),
+	arrow22 =  evol.loadImage("img/arrow22.png"),
+	arrow23 =  evol.loadImage("img/arrow23.png"),
 }
 
 img.ponspike11.cx = 17
@@ -57,12 +70,28 @@ img.ponspike12.cy = img.ponspike12.h
 img.ponspike13.cy = img.ponspike13.h
 img.ponspike14.cy = img.ponspike14.h
 
+img.ponspike21.cx = img.ponspike21.w - 17
+img.ponspike22.cx = img.ponspike22.w - 17
+img.ponspike23.cx = img.ponspike23.w - 17
+img.ponspike24.cx = img.ponspike24.w - 17
+img.ponspike21.cy = img.ponspike21.h
+img.ponspike22.cy = img.ponspike22.h
+img.ponspike23.cy = img.ponspike23.h
+img.ponspike24.cy = img.ponspike14.h
+
 img.ponbow11.cx = 17
 img.ponbow12.cx = 17
 img.ponbow13.cx = 17
 img.ponbow11.cy = img.ponbow11.h
 img.ponbow12.cy = img.ponbow12.h
 img.ponbow13.cy = img.ponbow13.h
+
+img.ponbow21.cx = img.ponbow21.w - 17
+img.ponbow22.cx = img.ponbow22.w - 17
+img.ponbow23.cx = img.ponbow23.w - 17
+img.ponbow21.cy = img.ponbow21.h
+img.ponbow22.cy = img.ponbow22.h
+img.ponbow23.cy = img.ponbow23.h
 
 snd = {}
 for i = 1,4 do

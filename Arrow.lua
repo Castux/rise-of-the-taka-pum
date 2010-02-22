@@ -9,7 +9,7 @@ function Arrow:init(x,y,dist)
 
 	self.g = 1500
 
-	self.vx = 500
+	self.vx = 500 * (dist > 0 and 1 or -1)
 	self.vy = -self.g*dist/2/self.vx
 	
 	
@@ -32,13 +32,14 @@ end
 function Arrow:draw()
 	
 	local sprite
+	local dir = self.vx > 0 and "arrow1" or "arrow2"
 	
 	if math.abs(self.vy) < 300 then
-		sprite = img.arrow12
+		sprite = img[dir .. "2"]
 	elseif self.vy > 0 then
-		sprite = img.arrow13
+		sprite = img[dir .. "3"]
 	else
-		sprite = img.arrow11
+		sprite = img[dir .. "1"]
 	end
 	
 	sprite:blit(self.x,self.y)

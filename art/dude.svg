@@ -62,14 +62,14 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4"
-     inkscape:cx="232.75505"
-     inkscape:cy="-63.581389"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="302.41301"
+     inkscape:cy="-40.966924"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="990"
-     inkscape:window-height="578"
+     inkscape:window-height="689"
      inkscape:window-x="34"
      inkscape:window-y="0" />
   <metadata
@@ -93,8 +93,8 @@
        id="rect4498"
        width="700"
        height="420"
-       x="124.92464"
-       y="-32.332577"
+       x="132.7028"
+       y="-161.73312"
        rx="0"
        ry="0"
        inkscape:export-filename="/home/tenoch/minild/concept.png"
@@ -959,7 +959,7 @@
     </g>
     <g
        id="g5384"
-       transform="matrix(2,0,0,2,23.075124,-119.85816)">
+       transform="matrix(2,0,0,2,-167.1366,-137.53583)">
       <path
          sodipodi:type="arc"
          style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -1896,5 +1896,416 @@
        id="path3550"
        d="M 363.15843,505.59416 L 388.82381,524.10619"
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Send);stroke-opacity:1" />
+    <g
+       inkscape:export-filename="/home/tenoch/minild/art/pon1.png"
+       inkscape:export-ydpi="89.714417"
+       inkscape:export-xdpi="89.714417"
+       transform="matrix(-0.4120904,0,0,0.4120904,698.08048,284.20645)"
+       id="g2708">
+      <g
+         id="g2710"
+         transform="translate(-45,-22.142857)">
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="M 232.42929,327.8736 C 230.93209,328.79496 247.628,360.28647 257.68311,364.74416"
+           id="path2712"
+           sodipodi:nodetypes="cs" />
+        <path
+           sodipodi:nodetypes="cs"
+           id="path2714"
+           d="M 209.60665,325.05236 C 211.10385,325.97372 194.40794,357.46523 184.35283,361.92292"
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           transform="matrix(3.8947369,0,0,3.8947369,-644.76974,-878.07235)"
+           d="M 232.33508,303.33408 A 9.5964489,9.5964489 0 1 1 213.14218,303.33408 A 9.5964489,9.5964489 0 1 1 232.33508,303.33408 z"
+           sodipodi:ry="9.5964489"
+           sodipodi:rx="9.5964489"
+           sodipodi:cy="303.33408"
+           sodipodi:cx="222.73863"
+           id="path2716"
+           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           sodipodi:type="arc" />
+        <path
+           sodipodi:type="arc"
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="path2718"
+           sodipodi:cx="222.73863"
+           sodipodi:cy="303.33408"
+           sodipodi:rx="9.5964489"
+           sodipodi:ry="9.5964489"
+           d="M 232.33508,303.33408 A 9.5964489,9.5964489 0 1 1 213.14218,303.33408 A 9.5964489,9.5964489 0 1 1 232.33508,303.33408 z"
+           transform="matrix(2,0,0,2,-225.26401,-294.74778)" />
+      </g>
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Send);stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 216.42857,325.93361 L 242.14286,164.50504"
+         id="path2720" />
+    </g>
+    <g
+       inkscape:export-filename="/home/tenoch/minild/art/pon2.png"
+       inkscape:export-ydpi="89.626076"
+       inkscape:export-xdpi="89.626076"
+       transform="matrix(-0.4120904,0,0,0.4120904,757.12855,285.04244)"
+       id="g2722">
+      <g
+         id="g2724"
+         transform="translate(-45,-22.142857)">
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="M 232.42929,327.8736 C 230.93209,328.79496 247.628,360.28647 257.68311,364.74416"
+           id="path2726"
+           sodipodi:nodetypes="cs" />
+        <path
+           sodipodi:nodetypes="cs"
+           id="path2728"
+           d="M 209.60665,325.05236 C 211.10385,325.97372 194.40794,357.46523 184.35283,361.92292"
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           transform="matrix(3.8947369,0,0,3.8947369,-644.76974,-878.07235)"
+           d="M 232.33508,303.33408 A 9.5964489,9.5964489 0 1 1 213.14218,303.33408 A 9.5964489,9.5964489 0 1 1 232.33508,303.33408 z"
+           sodipodi:ry="9.5964489"
+           sodipodi:rx="9.5964489"
+           sodipodi:cy="303.33408"
+           sodipodi:cx="222.73863"
+           id="path2730"
+           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           sodipodi:type="arc" />
+        <path
+           sodipodi:type="arc"
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="path2732"
+           sodipodi:cx="222.73863"
+           sodipodi:cy="303.33408"
+           sodipodi:rx="9.5964489"
+           sodipodi:ry="9.5964489"
+           d="M 232.33508,303.33408 A 9.5964489,9.5964489 0 1 1 213.14218,303.33408 A 9.5964489,9.5964489 0 1 1 232.33508,303.33408 z"
+           transform="matrix(2,0,0,2,-225.26401,-294.74778)" />
+      </g>
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Send);stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 213.48284,324.63604 L 262.65604,168.74376"
+         id="path2734" />
+    </g>
+    <g
+       inkscape:export-filename="/home/tenoch/minild/art/ponspike14.png"
+       id="g2736"
+       transform="matrix(-0.4120904,0,0,0.4120904,632.29758,280.71549)"
+       inkscape:export-xdpi="90.485878"
+       inkscape:export-ydpi="90.485878">
+      <g
+         transform="translate(-45,-22.142857)"
+         id="g2738">
+        <path
+           sodipodi:nodetypes="cs"
+           id="path2740"
+           d="M 232.42929,327.8736 C 230.93209,328.79496 247.628,360.28647 257.68311,364.74416"
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="M 209.60665,325.05236 C 211.10385,325.97372 194.40794,357.46523 184.35283,361.92292"
+           id="path2742"
+           sodipodi:nodetypes="cs" />
+        <path
+           sodipodi:type="arc"
+           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="path2744"
+           sodipodi:cx="222.73863"
+           sodipodi:cy="303.33408"
+           sodipodi:rx="9.5964489"
+           sodipodi:ry="9.5964489"
+           d="M 232.33508,303.33408 A 9.5964489,9.5964489 0 1 1 213.14218,303.33408 A 9.5964489,9.5964489 0 1 1 232.33508,303.33408 z"
+           transform="matrix(3.8947369,0,0,3.8947369,-644.76974,-878.07235)" />
+        <path
+           transform="matrix(2,0,0,2,-225.26401,-294.74778)"
+           d="M 232.33508,303.33408 A 9.5964489,9.5964489 0 1 1 213.14218,303.33408 A 9.5964489,9.5964489 0 1 1 232.33508,303.33408 z"
+           sodipodi:ry="9.5964489"
+           sodipodi:rx="9.5964489"
+           sodipodi:cy="303.33408"
+           sodipodi:cx="222.73863"
+           id="path2746"
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           sodipodi:type="arc" />
+      </g>
+      <path
+         id="path2748"
+         d="M 188.99122,303.27515 L 352.01428,291.27986"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Send);stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/tenoch/minild/art/ponspike23.png"
+       id="g2750"
+       transform="matrix(-1,0,0,1,855.58658,-94.045201)">
+      <g
+         id="g2752"
+         transform="matrix(0.4120904,0,0,0.4120904,209.86481,299.43988)">
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="M 232.42929,327.8736 C 230.93209,328.79496 247.628,360.28647 257.68311,364.74416"
+           id="path2754"
+           sodipodi:nodetypes="cs" />
+        <path
+           sodipodi:nodetypes="cs"
+           id="path2756"
+           d="M 209.60665,325.05236 C 211.10385,325.97372 194.40794,357.46523 184.35283,361.92292"
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           transform="matrix(3.8947369,0,0,3.8947369,-644.76974,-878.07235)"
+           d="M 232.33508,303.33408 A 9.5964489,9.5964489 0 1 1 213.14218,303.33408 A 9.5964489,9.5964489 0 1 1 232.33508,303.33408 z"
+           sodipodi:ry="9.5964489"
+           sodipodi:rx="9.5964489"
+           sodipodi:cy="303.33408"
+           sodipodi:cx="222.73863"
+           id="path2758"
+           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           sodipodi:type="arc" />
+        <path
+           sodipodi:type="arc"
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="path2760"
+           sodipodi:cx="222.73863"
+           sodipodi:cy="303.33408"
+           sodipodi:rx="9.5964489"
+           sodipodi:ry="9.5964489"
+           d="M 232.33508,303.33408 A 9.5964489,9.5964489 0 1 1 213.14218,303.33408 A 9.5964489,9.5964489 0 1 1 232.33508,303.33408 z"
+           transform="matrix(2,0,0,2,-225.26401,-294.74778)" />
+      </g>
+      <g
+         transform="matrix(1.5289306,-0.946001,1.7951398,2.901312,-523.99519,-75.509619)"
+         id="g2762">
+        <path
+           sodipodi:type="arc"
+           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="path2764"
+           sodipodi:cx="248.5"
+           sodipodi:cy="387.36218"
+           sodipodi:rx="7.25"
+           sodipodi:ry="8"
+           d="M 255.75,387.36218 A 7.25,8 0 1 1 241.25,387.36218 A 7.25,8 0 1 1 255.75,387.36218 z"
+           transform="matrix(1.1001832,0,0,0.997041,-22.020532,-133.10381)" />
+        <path
+           transform="matrix(0.6795249,0,0,0.6158194,82.513054,14.567009)"
+           d="M 255.75,387.36218 A 7.25,8 0 1 1 241.25,387.36218 A 7.25,8 0 1 1 255.75,387.36218 z"
+           sodipodi:ry="8"
+           sodipodi:rx="7.25"
+           sodipodi:cy="387.36218"
+           sodipodi:cx="248.5"
+           id="path2766"
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           sodipodi:type="arc" />
+        <path
+           sodipodi:type="arc"
+           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="path2768"
+           sodipodi:cx="248.5"
+           sodipodi:cy="387.36218"
+           sodipodi:rx="7.25"
+           sodipodi:ry="8"
+           d="M 255.75,387.36218 A 7.25,8 0 1 1 241.25,387.36218 A 7.25,8 0 1 1 255.75,387.36218 z"
+           transform="matrix(0.3346973,0,0,0.3033194,168.20271,135.61768)" />
+      </g>
+    </g>
+    <g
+       inkscape:export-ydpi="90.180969"
+       inkscape:export-xdpi="90.180969"
+       inkscape:export-filename="/home/tenoch/minild/art/ponbow11.png"
+       transform="matrix(-2,0,0,2,1169.6868,-41.868695)"
+       id="g2770">
+      <g
+         id="g2772">
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.06045198;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="M 242.14191,276.82523 C 241.83342,277.01507 245.27353,283.50375 247.34534,284.42223"
+           id="path2774"
+           sodipodi:nodetypes="cs" />
+        <path
+           sodipodi:nodetypes="cs"
+           id="path2776"
+           d="M 237.43941,276.24393 C 237.7479,276.43377 234.30779,282.92244 232.23599,283.84093"
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.06045198;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           transform="matrix(0.8024918,0,0,0.8024918,61.39926,28.345857)"
+           d="M 232.33508,303.33408 A 9.5964489,9.5964489 0 1 1 213.14218,303.33408 A 9.5964489,9.5964489 0 1 1 232.33508,303.33408 z"
+           sodipodi:ry="9.5964489"
+           sodipodi:rx="9.5964489"
+           sodipodi:cy="303.33408"
+           sodipodi:cx="222.73863"
+           id="path2778"
+           style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           sodipodi:type="arc" />
+        <rect
+           y="268.71112"
+           x="236.35045"
+           height="6.717514"
+           width="6.717514"
+           id="rect2780"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      </g>
+      <g
+         transform="matrix(0.9710401,-0.2389167,0.2389167,0.9710401,-58.649627,64.483564)"
+         id="g2782">
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="M 241.65374,254.56895 C 251.67704,255.32366 256.4289,267.35966 251.02291,277.54992"
+           id="path2784"
+           sodipodi:nodetypes="cc" />
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 242.53763,254.74573 L 251.37646,276.31248"
+           id="path2786" />
+        <path
+           id="path2788"
+           d="M 246.89534,264.8336 L 261.56781,258.91158"
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Send);stroke-opacity:1" />
+      </g>
+    </g>
+    <g
+       inkscape:export-ydpi="90.180969"
+       inkscape:export-xdpi="90.180969"
+       inkscape:export-filename="/home/tenoch/minild/art/ponbow12.png"
+       transform="matrix(-2,0,0,2,1108.4858,-40.275325)"
+       id="g2790">
+      <g
+         id="g2792">
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.06045198;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="M 242.14191,276.82523 C 241.83342,277.01507 245.27353,283.50375 247.34534,284.42223"
+           id="path2794"
+           sodipodi:nodetypes="cs" />
+        <path
+           sodipodi:nodetypes="cs"
+           id="path2796"
+           d="M 237.43941,276.24393 C 237.7479,276.43377 234.30779,282.92244 232.23599,283.84093"
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.06045198;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           transform="matrix(0.8024918,0,0,0.8024918,61.39926,28.345857)"
+           d="M 232.33508,303.33408 A 9.5964489,9.5964489 0 1 1 213.14218,303.33408 A 9.5964489,9.5964489 0 1 1 232.33508,303.33408 z"
+           sodipodi:ry="9.5964489"
+           sodipodi:rx="9.5964489"
+           sodipodi:cy="303.33408"
+           sodipodi:cx="222.73863"
+           id="path2798"
+           style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           sodipodi:type="arc" />
+        <rect
+           y="268.71112"
+           x="236.35045"
+           height="6.717514"
+           width="6.717514"
+           id="rect2800"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      </g>
+      <g
+         transform="matrix(0.8768104,-0.4808363,0.4808363,0.8768104,-99.646826,149.90904)"
+         id="g2802">
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="M 241.65374,254.56895 C 251.67704,255.32366 256.4289,267.35966 251.02291,277.54992"
+           id="path2804"
+           sodipodi:nodetypes="cc" />
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 242.53763,254.74573 L 251.37646,276.31248"
+           id="path2806" />
+        <path
+           id="path2808"
+           d="M 246.89534,264.8336 L 261.56781,258.91158"
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Send);stroke-opacity:1" />
+      </g>
+    </g>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/tenoch/minild/art/ponbow13.png"
+       transform="matrix(-2,0,0,2,1031.1255,-42.904841)"
+       id="g2810">
+      <g
+         transform="translate(-8.5,1.0025133e-8)"
+         id="g2812">
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.06045198;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="M 242.14191,276.82523 C 241.83342,277.01507 245.27353,283.50375 247.34534,284.42223"
+           id="path2814"
+           sodipodi:nodetypes="cs" />
+        <path
+           sodipodi:nodetypes="cs"
+           id="path2816"
+           d="M 237.43941,276.24393 C 237.7479,276.43377 234.30779,282.92244 232.23599,283.84093"
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.06045198;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           transform="matrix(0.8024918,0,0,0.8024918,61.39926,28.345857)"
+           d="M 232.33508,303.33408 A 9.5964489,9.5964489 0 1 1 213.14218,303.33408 A 9.5964489,9.5964489 0 1 1 232.33508,303.33408 z"
+           sodipodi:ry="9.5964489"
+           sodipodi:rx="9.5964489"
+           sodipodi:cy="303.33408"
+           sodipodi:cx="222.73863"
+           id="path2818"
+           style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           sodipodi:type="arc" />
+        <rect
+           y="268.71112"
+           x="236.35045"
+           height="6.717514"
+           width="6.717514"
+           id="rect2820"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      </g>
+      <g
+         id="g2822"
+         transform="matrix(0.7644653,-0.4730005,0.8975699,1.450656,-181.60332,22.333976)">
+        <path
+           transform="matrix(1.1001832,0,0,0.997041,-22.020532,-133.10381)"
+           d="M 255.75,387.36218 A 7.25,8 0 1 1 241.25,387.36218 A 7.25,8 0 1 1 255.75,387.36218 z"
+           sodipodi:ry="8"
+           sodipodi:rx="7.25"
+           sodipodi:cy="387.36218"
+           sodipodi:cx="248.5"
+           id="path2824"
+           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           sodipodi:type="arc" />
+        <path
+           sodipodi:type="arc"
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="path2826"
+           sodipodi:cx="248.5"
+           sodipodi:cy="387.36218"
+           sodipodi:rx="7.25"
+           sodipodi:ry="8"
+           d="M 255.75,387.36218 A 7.25,8 0 1 1 241.25,387.36218 A 7.25,8 0 1 1 255.75,387.36218 z"
+           transform="matrix(0.6795249,0,0,0.6158194,82.513054,14.567009)" />
+        <path
+           transform="matrix(0.3346973,0,0,0.3033194,168.20271,135.61768)"
+           d="M 255.75,387.36218 A 7.25,8 0 1 1 241.25,387.36218 A 7.25,8 0 1 1 255.75,387.36218 z"
+           sodipodi:ry="8"
+           sodipodi:rx="7.25"
+           sodipodi:cy="387.36218"
+           sodipodi:cx="248.5"
+           id="path2828"
+           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           sodipodi:type="arc" />
+      </g>
+    </g>
+    <path
+       inkscape:export-ydpi="88.803268"
+       inkscape:export-xdpi="88.803268"
+       inkscape:export-filename="/home/tenoch/minild/art/arrow11.png"
+       id="path2830"
+       d="M 390.18251,557.25764 L 364.51713,538.74561"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Send);stroke-opacity:1" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Send);stroke-opacity:1"
+       d="M 358.975,546.91702 L 327.33048,546.74018"
+       id="path2832"
+       inkscape:export-filename="/home/tenoch/minild/img/arrow22.png"
+       inkscape:export-xdpi="80.001083"
+       inkscape:export-ydpi="80.001083" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#Arrow1Send);stroke-opacity:1"
+       d="M 316.80026,538.82818 L 291.13488,557.34021"
+       id="path2834"
+       inkscape:export-filename="/home/tenoch/minild/art/arrow13.png"
+       inkscape:export-xdpi="88.803268"
+       inkscape:export-ydpi="88.803268" />
   </g>
 </svg>

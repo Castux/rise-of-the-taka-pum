@@ -10,10 +10,14 @@ game.init = function()
 	game.drummer2 = Drummer(630,50,2)
 	
 	game.pons1 = {}
+	game.pons2 = {}
 	
 	for i=1,5 do
 		TI(game.pons1, Pon(math.random()*200+20,'spike',1))
 		TI(game.pons1, Pon(math.random()*200+20,'bow',1))
+		
+		TI(game.pons2, Pon(math.random()*200+600,'spike',2))
+		TI(game.pons2, Pon(math.random()*200+600,'bow',2))
 	end
 	
 	game.arrows = {}
@@ -28,6 +32,10 @@ game.update = function(dt,fps,ticks)
 	game.drummer2:update(dt)
 	
 	for i,v in ipairs(game.pons1) do
+		v:update(dt)
+	end
+	
+	for i,v in ipairs(game.pons2) do
 		v:update(dt)
 	end
 	
@@ -49,6 +57,10 @@ game.update = function(dt,fps,ticks)
 	game.drummer2:draw()
 	
 	for i,v in ipairs(game.pons1) do
+		v:draw()
+	end
+	
+	for i,v in ipairs(game.pons2) do
 		v:draw()
 	end
 	

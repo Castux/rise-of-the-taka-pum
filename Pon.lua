@@ -9,6 +9,7 @@ function Pon:init(x,kind,team)
 	self.kind = kind
 	
 	self.team = team
+	self.dir = self.team == 1 and 1 or -1
 	
 	self.state = 'idle'
 	self.anim = math.random(0,1) + 1
@@ -29,11 +30,13 @@ end
 function Pon:update(dt)
 	
 	local anim_speed = 0.1
-		
+	local d = self.dir
+	
 	-- march
 	if self.state == 'marching' then
-		if self.x < self.target then
-			self.x = self.x + 50*dt + rand(2)
+		if (d == 1 and self.x < self.target) or
+			(d == -1 and self.x > self.target) then
+			self.x = self.x + d*(50*dt + rand(2))
 		else
 			self.state = 'idle'
 		end
@@ -41,8 +44,9 @@ function Pon:update(dt)
 		
 	-- retreat
 	elseif self.state == 'retreating' then
-		if self.x > self.target then
-			self.x = self.x - 50*dt - rand(2)
+		if (d == 1 and self.x > self.target) or
+			(d == -1 and self.x < self.target) then
+			self.x = self.x - d*(50*dt + rand(2))
 		else
 			self.state = 'idle'
 		end
@@ -94,14 +98,16 @@ function Pon:draw()
 end
 
 function Pon:launch(action)
+
+	local d = self.dir
 	
 	if action == 'march' then
 		self.state = 'marching'
-		self.target = self.x + 50 + rand(20)
+		self.target = self.x + d*(50 + rand(20))
 	
 	elseif action == 'retreat' then
 		self.state = 'retreating'
-		self.target = self.x - 50 - rand(20)
+		self.target = self.x - d*(50 + rand(20))
 	
 	elseif action == 'protect' then
 		self.state = 'protecting'
@@ -110,7 +116,7 @@ function Pon:launch(action)
 		
 	elseif action == 'attack' then
 		self.state = 'attacking'
-		self.target = self.x + 100 + rand(20)
+		self.target = self.x + d*(100 + rand(20))
 		self.bowtimer = rand(1)
 		self.timer = 3
 		
@@ -119,9 +125,11 @@ end
 
 function Pon:bow_attack(dt)
 	
+	local d = self.dir
+	
 	self.bowtimer = self.bowtimer - dt
 	if self.bowtimer < 0 then
-		game.add_arrow(self.x,400 - 40,400)
+		game.add_arrow(self.x,400 - 40,d*400)
 		
 		self.bowtimer = rand(1)
 	end
@@ -134,9 +142,12 @@ function Pon:bow_attack(dt)
 end
 
 function Pon:spike_attack(dt)
-
-	if self.x < self.target then
-			self.x = self.x + 100*dt + rand(2)
+	
+	local d = self.dir
+	
+	if (d == 1 and self.x < self.target) or 
+		(d == -1 and self.x > self.target) then
+			self.x = self.x + d*(100*dt + rand(2))
 		else
 			self.state = 'idle'
 		end
