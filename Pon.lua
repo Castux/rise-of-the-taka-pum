@@ -235,3 +235,11 @@ function Pon:heal()
 	self.special = img.heal
 	self.spe_timer = 2
 end
+
+function Pon:spawn()
+
+	self.special = img.spawn
+	self.spe_timer = 2
+	
+	return self
+end

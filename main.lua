@@ -70,6 +70,7 @@ img = {
 	blood3 = evol.loadImage("img/blood3.png"),
 	
 	heal = evol.loadImage("img/heal.png"),
+	spawn = evol.loadImage("img/spawn.png"),
 }
 
 img.ponspike11.cx = 17

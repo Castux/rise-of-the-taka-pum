@@ -21,21 +21,42 @@ game.init = function()
 	game.pons1 = {}
 	game.pons2 = {}
 	
-	local ground = 30 - 1
-	
-	for i=1,5 do
-		TI(game.pons1, Pon(math.random()*200+20,game.screen1.h - ground,'spike',1))
-		TI(game.pons1, Pon(math.random()*200+20,game.screen1.h - ground,'bow',1))
-		
-		TI(game.pons2, Pon(math.random()*200+1180,game.screen1.h - ground,'spike',2))
-		TI(game.pons2, Pon(math.random()*200+1180,game.screen1.h - ground,'bow',2))
-	end
+
+	game.spawn(5,5,1)
+	game.spawn(5,5,2)
 	
 	game.arrows = {}
 	
 	-- pick a random background
 	game.bg = img["bg" .. math.random(3)]
 
+end
+
+game.spawn = function(spike,bow,team,anim)
+	
+	local ground = 30 - 1
+
+	local pos = team == 1 and 20 or 1180
+	local tab = game["pons" .. team]
+	
+	local tmp = {}
+	
+	for i = 1,spike do
+		TI(tmp, Pon(math.random()*200+ pos,game.screen1.h - ground,'spike',team))
+	end
+	
+	for i = 1,bow do
+		TI(tmp, Pon(math.random()*200+ pos,game.screen1.h - ground,'bow',team))
+	end
+	
+
+	for i,v in ipairs(tmp) do
+		if anim then
+			v:spawn()
+		end
+		TI(tab,v)
+	end
+	
 end
 
 game.update = function(dt,fps,ticks)
@@ -132,6 +153,11 @@ game.keydown = function(key)
 end
 
 game.launch = function(action, team)
+	
+	if action == 'spawn' then
+		game.spawn(4,4,team,true)
+		return
+	end
 	
 	for i,v in ipairs(game["pons"..team]) do
 		v:launch(action)
