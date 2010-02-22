@@ -116,7 +116,7 @@ function Pon:launch(action)
 	
 	elseif action == 'retreat' then
 		self.state = 'retreating'
-		self.target = self.x - d*(50 + rand(20))
+		self.target = self.x - d*(100 + rand(20))
 	
 	elseif action == 'protect' then
 		self.state = 'protecting'
@@ -130,6 +130,36 @@ function Pon:launch(action)
 		self.spiked = false
 		self.timer = 3
 		
+	elseif action == 'march-bow' then
+		if self.kind == 'bow' then
+			self:launch('march')
+		end
+		
+	elseif action == 'march-spike' then
+		if self.kind == 'spike' then
+			self:launch('march')
+		end
+	
+	elseif action == 'attack-bow' then
+		if self.kind == 'bow' then
+			self:launch('attack')
+		end
+		
+	elseif action == 'attack-spike' then
+		if self.kind == 'spike' then
+			self:launch('attack')
+		end
+	
+	elseif action == 'retreat-bow' then
+		if self.kind == 'bow' then
+			self:launch('retreat')
+		end
+		
+	elseif action == 'retreat-spike' then
+		if self.kind == 'spike' then
+			self:launch('retreat')
+		end
+	
 	end
 end
 
@@ -165,7 +195,8 @@ function Pon:spike_attack(dt)
 			end
 		
 		else
-			self.state = 'idle'
+			--self.state = 'idle'
+			self:launch('retreat')
 		end
 end
 

@@ -24,6 +24,7 @@ rand = function(x) return (math.random()*x) end
 -- Set it up
 
 evol.init(700,430)
+math.randomseed(os.time())
 
 -- Load stuff
 
@@ -59,6 +60,10 @@ img = {
 	arrow21 =  evol.loadImage("img/arrow21.png"),
 	arrow22 =  evol.loadImage("img/arrow22.png"),
 	arrow23 =  evol.loadImage("img/arrow23.png"),
+	
+	bg1 = evol.loadImage("img/bg1.png"),
+	bg2 = evol.loadImage("img/bg2.png"),
+	bg3 = evol.loadImage("img/bg3.png"),
 }
 
 img.ponspike11.cx = 17
@@ -92,6 +97,11 @@ img.ponbow23.cx = img.ponbow23.w - 17
 img.ponbow21.cy = img.ponbow21.h
 img.ponbow22.cy = img.ponbow22.h
 img.ponbow23.cy = img.ponbow23.h
+
+for i = 1,3 do
+	img["bg"..i].cx = 0
+	img["bg"..i].cy = 0
+end
 
 snd = {}
 for i = 1,4 do

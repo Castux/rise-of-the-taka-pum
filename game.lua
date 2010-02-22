@@ -21,16 +21,20 @@ game.init = function()
 	game.pons1 = {}
 	game.pons2 = {}
 	
+	local ground = 30 - 1
+	
 	for i=1,5 do
-		TI(game.pons1, Pon(math.random()*200+20,game.screen1.h - 20,'spike',1))
-		TI(game.pons1, Pon(math.random()*200+20,game.screen1.h - 20,'bow',1))
+		TI(game.pons1, Pon(math.random()*200+20,game.screen1.h - ground,'spike',1))
+		TI(game.pons1, Pon(math.random()*200+20,game.screen1.h - ground,'bow',1))
 		
-		TI(game.pons2, Pon(math.random()*200+1180,game.screen1.h - 20,'spike',2))
-		TI(game.pons2, Pon(math.random()*200+1180,game.screen1.h - 20,'bow',2))
+		TI(game.pons2, Pon(math.random()*200+1180,game.screen1.h - ground,'spike',2))
+		TI(game.pons2, Pon(math.random()*200+1180,game.screen1.h - ground,'bow',2))
 	end
 	
 	game.arrows = {}
 	
+	-- pick a random background
+	game.bg = img["bg" .. math.random(3)]
 
 end
 
@@ -85,8 +89,8 @@ end
 
 game.draw = function(shift,surf)
 
-	evol.fill({153,0,0},nil,surf)
-	
+	--evol.fill({153,0,0},nil,surf)
+	game.bg:blit(-shift,0,surf)
 	
 	
 	for i,v in ipairs(game.pons1) do
