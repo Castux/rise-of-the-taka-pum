@@ -29,6 +29,10 @@ function Pon:init(x,y,kind,team)
 	-- life!
 	self.hp = 100
 	
+	-- special drawing
+	self.special = nil
+	self.spe_timer = 0
+	
 	return self
 end
 
@@ -76,6 +80,14 @@ function Pon:update(dt)
 		self.anim = self.anim % 2 + 1
 	end
 	
+	-- special sprite
+	if self.special then
+		self.spe_timer = self.spe_timer - dt
+		if self.spe_timer < 0 then
+			self.special = nil
+		end
+	end
+	
 	-- die?
 	if self.hp < 0 then
 		return true
@@ -102,7 +114,11 @@ function Pon:draw(shift,surf)
 	elseif self.state == 'attacking' and self.kind == 'spike' then
 		sprite = img["pon" .. self.kind .. self.team .. "4"]
 	end
-
+	
+	if self.special then
+		self.special:blit(self.x-shift,self.y-20,surf)
+	end
+	
 	sprite:blit(self.x-shift,self.y,surf)
 end
 
@@ -204,5 +220,7 @@ function Pon:hit(hit)
 
 	if self.state ~= 'protecting' then
 		self.hp = self.hp - hit
+		self.special = img["blood" .. math.random(3)]
+		self.spe_timer = 0.2
 	end
 end
