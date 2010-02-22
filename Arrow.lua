@@ -7,7 +7,7 @@ function Arrow:init(x,y,dist)
 	self.x = x
 	self.y = y
 
-	self.g = 1500
+	self.g = 800
 
 	self.vx = 500 * (dist > 0 and 1 or -1)
 	self.vy = -self.g*dist/2/self.vx
@@ -23,7 +23,10 @@ function Arrow:update(dt)
 	self.x = self.x + self.vx*dt
 	self.y = self.y + self.vy*dt
 	
-	if self.y >= 400 then
+	if self.y >= 380 then
+		-- check collision
+		game.inflict_damage(self.x, 10)
+		
 		-- die
 		return true
 	end

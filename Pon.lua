@@ -23,6 +23,10 @@ function Pon:init(x,kind,team)
 	-- multi purpose
 	self.timer = 0
 	self.bowtimer = 0
+	self.spiked = false
+	
+	-- life!
+	self.hp = 100
 	
 	return self
 end
@@ -71,6 +75,10 @@ function Pon:update(dt)
 		self.anim = self.anim % 2 + 1
 	end
 	
+	-- die?
+	if self.hp < 0 then
+		return true
+	end
 	
 end
 
@@ -118,6 +126,7 @@ function Pon:launch(action)
 		self.state = 'attacking'
 		self.target = self.x + d*(100 + rand(20))
 		self.bowtimer = rand(1)
+		self.spiked = false
 		self.timer = 3
 		
 	end
@@ -129,7 +138,7 @@ function Pon:bow_attack(dt)
 	
 	self.bowtimer = self.bowtimer - dt
 	if self.bowtimer < 0 then
-		game.add_arrow(self.x,400 - 40,d*400)
+		game.add_arrow(self.x,400 - 40,d*500)
 		
 		self.bowtimer = rand(1)
 	end
@@ -148,6 +157,12 @@ function Pon:spike_attack(dt)
 	if (d == 1 and self.x < self.target) or 
 		(d == -1 and self.x > self.target) then
 			self.x = self.x + d*(100*dt + rand(2))
+
+			if not self.spiked then
+				-- check collision
+				self.spiked = game.inflict_damage(self.x + d*75,50,self.team)
+			end
+		
 		else
 			self.state = 'idle'
 		end

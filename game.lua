@@ -31,12 +31,24 @@ game.update = function(dt,fps,ticks)
 	game.drummer1:update(dt)
 	game.drummer2:update(dt)
 	
-	for i,v in ipairs(game.pons1) do
-		v:update(dt)
+	local i = 1
+	while i <= #game.pons1 do
+		local die = game.pons1[i]:update(dt)
+		if die then
+			table.remove(game.pons1, i)
+		else
+			i = i + 1
+		end
 	end
 	
-	for i,v in ipairs(game.pons2) do
-		v:update(dt)
+	local i = 1
+	while i <= #game.pons2 do
+		local die = game.pons2[i]:update(dt)
+		if die then
+			table.remove(game.pons2, i)
+		else
+			i = i + 1
+		end
 	end
 	
 	local i = 1
@@ -57,11 +69,11 @@ game.update = function(dt,fps,ticks)
 	game.drummer2:draw()
 	
 	for i,v in ipairs(game.pons1) do
-		v:draw()
+		v:draw(dt)
 	end
 	
 	for i,v in ipairs(game.pons2) do
-		v:draw()
+		v:draw(dt)
 	end
 	
 	for i,v in ipairs(game.arrows) do
@@ -105,4 +117,33 @@ game.add_arrow = function(x,y,dist)
 	
 	TI(game.arrows, Arrow(x,y,dist))
 	
+end
+
+game.inflict_damage = function(x, hit, team)
+	
+	local eps = 20
+	local didhit = false
+	
+	if not team or team == 2 then
+		for i,v in ipairs(game.pons1) do
+			if math.abs(v.x-x) < eps then
+				v.hp = v.hp - hit
+				didhit = true
+				break
+			end
+		end
+	end	
+
+
+	if not team or team == 1 then
+		for i,v in ipairs(game.pons2) do
+			if math.abs(v.x-x) < eps then
+				v.hp = v.hp - hit
+				didhit = true
+				break
+			end
+		end
+	end
+	
+	return didhit
 end
