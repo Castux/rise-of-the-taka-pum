@@ -57,9 +57,9 @@ function Drummer:update(dt)
 	
 end
 
-function Drummer:draw()
+function Drummer:draw(surf)
 	
-	img["drummer".. self.state]:blit(self.x,self.y)
+	img["drummer".. self.state]:blit(self.x,self.y,surf)
 end
 
 function Drummer:hit(n)

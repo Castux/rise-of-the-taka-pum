@@ -2,9 +2,10 @@ require "class"
 
 Pon = class()
 
-function Pon:init(x,kind,team)
+function Pon:init(x,y,kind,team)
 	
 	self.x = x
+	self.y = y
 	
 	self.kind = kind
 	
@@ -82,7 +83,7 @@ function Pon:update(dt)
 	
 end
 
-function Pon:draw()
+function Pon:draw(shift,surf)
 	
 	local sprite
 	
@@ -102,7 +103,7 @@ function Pon:draw()
 		sprite = img["pon" .. self.kind .. self.team .. "4"]
 	end
 
-	sprite:blit(self.x,400)
+	sprite:blit(self.x-shift,self.y,surf)
 end
 
 function Pon:launch(action)
@@ -138,7 +139,7 @@ function Pon:bow_attack(dt)
 	
 	self.bowtimer = self.bowtimer - dt
 	if self.bowtimer < 0 then
-		game.add_arrow(self.x,400 - 40,d*500)
+		game.add_arrow(self.x,self.y - 40,d*500)
 		
 		self.bowtimer = rand(1)
 	end
@@ -166,4 +167,11 @@ function Pon:spike_attack(dt)
 		else
 			self.state = 'idle'
 		end
+end
+
+function Pon:hit(hit)
+
+	if self.state ~= 'protecting' then
+		self.hp = self.hp - hit
+	end
 end

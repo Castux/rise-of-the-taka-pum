@@ -6,6 +6,15 @@ game = {}
 
 game.init = function()
 	
+	-- rendering crap
+	game.screen1 = evol.makeImage(700,215)
+	game.screen1.cx = 0
+	game.screen1.cy = 0
+	
+	game.screen2 = evol.makeImage(700,215)
+	game.screen2.cx = 0
+	game.screen2.cy = 0
+	
 	game.drummer1 = Drummer(70,50,1)
 	game.drummer2 = Drummer(630,50,2)
 	
@@ -13,15 +22,16 @@ game.init = function()
 	game.pons2 = {}
 	
 	for i=1,5 do
-		TI(game.pons1, Pon(math.random()*200+20,'spike',1))
-		TI(game.pons1, Pon(math.random()*200+20,'bow',1))
+		TI(game.pons1, Pon(math.random()*200+20,game.screen1.h - 20,'spike',1))
+		TI(game.pons1, Pon(math.random()*200+20,game.screen1.h - 20,'bow',1))
 		
-		TI(game.pons2, Pon(math.random()*200+600,'spike',2))
-		TI(game.pons2, Pon(math.random()*200+600,'bow',2))
+		TI(game.pons2, Pon(math.random()*200+1180,game.screen1.h - 20,'spike',2))
+		TI(game.pons2, Pon(math.random()*200+1180,game.screen1.h - 20,'bow',2))
 	end
 	
 	game.arrows = {}
 	
+
 end
 
 game.update = function(dt,fps,ticks)
@@ -62,22 +72,33 @@ game.update = function(dt,fps,ticks)
 	end
 	
 	-- Draw
+		
+	game.draw(0,game.screen1)
+	game.draw(700,game.screen2)
 	
-	evol.fill({153,0,0})
+	game.drummer1:draw(game.screen1)
+	game.drummer2:draw(game.screen2)
 	
-	game.drummer1:draw()
-	game.drummer2:draw()
+	game.screen1:blit(0,0)
+	game.screen2:blit(0,215)
+end
+
+game.draw = function(shift,surf)
+
+	evol.fill({153,0,0},nil,surf)
+	
+	
 	
 	for i,v in ipairs(game.pons1) do
-		v:draw(dt)
+		v:draw(shift,surf)
 	end
 	
 	for i,v in ipairs(game.pons2) do
-		v:draw(dt)
+		v:draw(shift,surf)
 	end
 	
 	for i,v in ipairs(game.arrows) do
-		v:draw(dt)
+		v:draw(shift,surf)
 	end
 	
 end
@@ -127,7 +148,7 @@ game.inflict_damage = function(x, hit, team)
 	if not team or team == 2 then
 		for i,v in ipairs(game.pons1) do
 			if math.abs(v.x-x) < eps then
-				v.hp = v.hp - hit
+				v:hit(hit)
 				didhit = true
 				break
 			end
@@ -138,7 +159,7 @@ game.inflict_damage = function(x, hit, team)
 	if not team or team == 1 then
 		for i,v in ipairs(game.pons2) do
 			if math.abs(v.x-x) < eps then
-				v.hp = v.hp - hit
+				v:hit(hit)
 				didhit = true
 				break
 			end

@@ -6,6 +6,7 @@ function Arrow:init(x,y,dist)
 	
 	self.x = x
 	self.y = y
+	self.yinit = y
 
 	self.g = 800
 
@@ -23,7 +24,7 @@ function Arrow:update(dt)
 	self.x = self.x + self.vx*dt
 	self.y = self.y + self.vy*dt
 	
-	if self.y >= 380 then
+	if self.y >= self.yinit then
 		-- check collision
 		game.inflict_damage(self.x, 10)
 		
@@ -32,7 +33,7 @@ function Arrow:update(dt)
 	end
 end
 
-function Arrow:draw()
+function Arrow:draw(shift,surf)
 	
 	local sprite
 	local dir = self.vx > 0 and "arrow1" or "arrow2"
@@ -45,6 +46,6 @@ function Arrow:draw()
 		sprite = img[dir .. "1"]
 	end
 	
-	sprite:blit(self.x,self.y)
+	sprite:blit(self.x-shift,self.y,surf)
 	
 end
