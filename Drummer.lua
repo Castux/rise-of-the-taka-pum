@@ -67,7 +67,7 @@ function Drummer:update(dt)
 	if self.clock >= 0 then
 		self.clock = self.clock + dt
 		
-		if self.clock > self.times[#self.times]*beat + 2*beat then	-- timeout!
+		if self.clock > self.times[#self.times]*beat + 1.75*beat then	-- timeout!
 			print("timeout")
 			self:reset_pattern()
 		end

@@ -1,6 +1,7 @@
 require "Drummer"
 require "Pon"
 require "Arrow"
+require "tutorials"
 
 game = {}
 
