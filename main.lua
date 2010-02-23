@@ -15,6 +15,7 @@
 require "evol"
 
 require "game"
+require "win"
 
 -- Shortcuts
 
@@ -71,6 +72,9 @@ img = {
 	
 	heal = evol.loadImage("img/heal.png"),
 	spawn = evol.loadImage("img/spawn.png"),
+	
+	win1 = evol.loadImage("img/win1.png"),
+	win2 = evol.loadImage("img/win2.png"),
 }
 
 img.ponspike11.cx = 17
@@ -138,9 +142,9 @@ function main()
 end
 
 -- Game mode manager
-setGameMode = function(mode)
+setGameMode = function(mode,...)
 	gameMode = mode
-	mode.init()
+	mode.init(...)
 end
 
 setGameMode(game)

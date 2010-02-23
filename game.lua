@@ -29,7 +29,13 @@ game.init = function()
 	
 	-- pick a random background
 	game.bg = math.random(3)
-
+	
+	-- fade to win screen
+	game.fade = -1
+	game.fade_img = evol.makeImage(700,430)
+	game.fade_img:fill{255,255,255,10}
+	game.fade_img.cx = 0
+	game.fade_img.cy = 0
 end
 
 game.spawn = function(spike,bow,team,anim)
@@ -96,6 +102,17 @@ game.update = function(dt,fps,ticks)
 		end
 	end
 	
+	-- Winning condition
+	if not game.winner and #game.pons1 == 0 then
+		game.winner = 2
+		game.fade = 2
+		print "2 wins"
+	elseif not game.winner and #game.pons2 == 0 then
+		game.winner = 1
+		game.fade = 2
+		print "1 wins"
+	end
+	
 	-- Draw
 		
 	game.draw(0,game.screen1)
@@ -106,6 +123,16 @@ game.update = function(dt,fps,ticks)
 	
 	game.screen1:blit(0,0)
 	game.screen2:blit(0,215)
+	
+	-- fade
+	if game.fade > 0 then
+		game.fade_img:fill{255,255,255,(2-game.fade)/2*255}
+		game.fade_img:blit()
+		game.fade = game.fade - dt
+		if game.fade < 0 then
+			setGameMode(win,game.winner)
+		end
+	end
 end
 
 game.draw = function(shift,surf)
@@ -149,6 +176,10 @@ game.keydown = function(key)
 		game.drummer2:hit(4)
 	end
 	
+	if key == evol.key_a then
+		game.fade = 2
+		game.winner = 2
+	end
 end
 
 game.launch = function(action, team)
