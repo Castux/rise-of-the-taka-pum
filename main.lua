@@ -17,6 +17,8 @@ require "evol"
 require "game"
 require "win"
 
+require "textwrap"
+
 -- Shortcuts
 
 TI = table.insert
@@ -27,6 +29,32 @@ copy = function(t)
 	for k,v in pairs(t) do u[k] = v end
 	return u
 end
+
+tmax = function(t,fun)
+	local f = fun
+	
+	if not f then
+		f = function(v) return v end
+	end
+	
+	if type(f) ~= 'function' then
+		f = function(v) return v[fun] end
+	end
+	
+	local m = f(t[next(t)])
+	
+	for k,v in pairs(t) do
+		local tmp = f(v)
+		if tmp > m then
+			m = tmp
+		end
+	end
+	
+	return m
+end
+
+--print('max', tmax{2,5,7,4,8,5,6,7,14,6})
+--print('max', tmax({{a = 2},{a = 5},{a = 7}},"a"))
 
 -- Set it up
 
@@ -124,6 +152,8 @@ snd = {}
 for i = 1,4 do
 	snd["drum" .. i] = evol.loadSound("snd/drum" .. i .. ".ogg")
 end
+
+font = evol.loadFont("img/Essays1743.ttf",24)
 
 function main()
 

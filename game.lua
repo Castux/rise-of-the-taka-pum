@@ -125,6 +125,10 @@ game.update = function(dt,fps,ticks)
 	game.screen1:blit(0,0)
 	game.screen2:blit(0,215)
 	
+	local x,y = evol.mouse()
+	textwrap(font,"Hé falut les copains, ça va bien ? Moi oui, super !",x,y,150,100,{0,100,0})
+	
+	
 	-- fade
 	if game.fade > 0 then
 		game.fade_img:fill{255,255,255,(2-game.fade)/2*255}
