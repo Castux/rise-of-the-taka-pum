@@ -19,7 +19,7 @@ patterns = {
 	["1334"] = {{0, 1, 1.5, 2}, 'protect-bow'},
 	["13321"] = {{0, 1, 1.5, 2, 2.5}, 'protect'},
 	
-	["4243131"] = {{0, 1, 2, 3.5, 4, 4.5, 5}, 'heal'},
+	["42431312"] = {{0, 1, 2, 3.5, 4, 4.5, 5, 5.5}, 'heal'},
 	["2311411"] = {{0, 0.5, 1, 1.5, 2, 2.5, 3}, 'sun'},
 	
 	["3131443131"] = {{0, 0.75, 1.5, 2, 2.5, 3, 4, 4.75, 5.5, 6}, 'spawn'},
@@ -39,6 +39,8 @@ function Drummer:init(x,y,team)
 	self.state = 0
 	self.timer = 0
 	
+	self.fail_timer = -1
+	
 	self:reset_pattern()
 	
 	return self
@@ -54,6 +56,11 @@ function Drummer:update(dt)
 	
 	if self.timer < 0 then
 		self.state = 0
+	end
+	
+	-- fail timer
+	if self.fail_timer > 0 then
+		self.fail_timer = self.fail_timer - dt
 	end
 	
 	-- Pattern clock
@@ -72,7 +79,13 @@ end
 
 function Drummer:draw(surf)
 	
-	img["drummer".. self.state]:blit(self.x,self.y,surf)
+	local x,y = 0,0
+	
+	if self.fail_timer > 0 then
+		x,y = rand(3),rand(3)
+	end
+	
+	img["drummer".. self.state]:blit(self.x+x,self.y+y,surf)
 end
 
 function Drummer:hit(n)
@@ -127,6 +140,7 @@ function Drummer:check_pattern()
 		game.launch(pattern[2], self.team)
 	else
 		print "Fail!"
+		self.fail_timer = 1
 	end
 	
 	-- reset

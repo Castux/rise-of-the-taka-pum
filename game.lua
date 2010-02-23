@@ -154,7 +154,7 @@ end
 game.launch = function(action, team)
 	
 	if action == 'spawn' then
-		game.spawn(4,4,team,true)
+		game.spawn(2,2,team,true)
 		return
 	elseif action == 'sun' then
 		game.bg = game.bg % 3 + 1
