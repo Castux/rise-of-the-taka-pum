@@ -22,6 +22,12 @@ require "win"
 TI = table.insert
 rand = function(x) return (math.random()*x) end
 
+copy = function(t)
+	local u = {}
+	for k,v in pairs(t) do u[k] = v end
+	return u
+end
+
 -- Set it up
 
 evol.init(700,430)

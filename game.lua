@@ -155,6 +155,8 @@ game.draw = function(shift,surf)
 	
 end
 
+
+gind = nil
 game.keydown = function(key)
 	
 	if key == evol.key_1 then
@@ -178,8 +180,9 @@ game.keydown = function(key)
 	end
 	
 	if key == evol.key_a then
-		game.fade = 2
-		game.winner = 2
+	
+		gind = next(patterns,gind)
+		game.drummer2:start_auto(gind,patterns[gind][1])
 	end
 end
 

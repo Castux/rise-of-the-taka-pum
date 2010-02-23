@@ -26,6 +26,14 @@ patterns = {
 
 }
 
+function find_pattern(name)
+	for k,v in pairs(patterns) do
+		if v[2] == name then
+			return k,copy(v[1])
+		end
+	end
+end
+
 beat = 0.5	-- sec per beat
 precision = 1/8
 
@@ -40,8 +48,10 @@ function Drummer:init(x,y,team)
 	self.timer = 0
 	
 	self.fail_timer = -1
+
+	self:reset_pattern()	-- sets pattern, times & clock
 	
-	self:reset_pattern()
+	self.auto_clock = -1
 	
 	return self
 end
@@ -73,7 +83,20 @@ function Drummer:update(dt)
 		end
 	end
 	
-	
+	-- Auto stuff
+	if self.auto_clock >= 0 then
+		self.auto_clock = self.auto_clock + dt
+		
+		if self.auto_clock >= self.auto_times[1]*beat then
+			self:hit(self.auto_pattern:sub(1,1))
+			table.remove(self.auto_times,1)
+			self.auto_pattern = self.auto_pattern:sub(2,-1)
+			
+			if #self.auto_pattern == 0 then
+				self.auto_clock = -1
+			end
+		end
+	end
 	
 end
 
@@ -146,4 +169,12 @@ function Drummer:check_pattern()
 	-- reset
 	self:reset_pattern()
 
+end
+
+function Drummer:start_auto(pat,times)
+	
+	self.auto_pattern = pat
+	self.auto_times = copy(times)
+	
+	self.auto_clock = 0
 end
