@@ -14,6 +14,7 @@
 
 require "evol"
 
+require "menu"
 require "game"
 require "win"
 
@@ -109,6 +110,8 @@ img = {
 	
 	win1 = evol.loadImage("img/win1.png"),
 	win2 = evol.loadImage("img/win2.png"),
+	
+	menu = evol.loadImage("img/menu.png"),
 }
 
 img.ponspike11.cx = 17
@@ -184,5 +187,5 @@ setGameMode = function(mode,...)
 	mode.init(...)
 end
 
-setGameMode(game)
+setGameMode(menu)
 main()

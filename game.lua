@@ -5,7 +5,7 @@ require "tutorials"
 
 game = {}
 
-game.init = function()
+game.init = function(mode)
 	
 	-- rendering crap
 	game.screen1 = evol.makeImage(700,215)
@@ -22,10 +22,6 @@ game.init = function()
 	game.pons1 = {}
 	game.pons2 = {}
 	
-
-	game.spawn(5,5,1)
-	game.spawn(5,5,2)
-	
 	game.arrows = {}
 	
 	-- pick a random background
@@ -34,9 +30,19 @@ game.init = function()
 	-- fade to win screen
 	game.fade = -1
 	game.fade_img = evol.makeImage(700,430)
-	game.fade_img:fill{255,255,255,10}
 	game.fade_img.cx = 0
 	game.fade_img.cy = 0
+	
+	if mode == 2 then
+		game.pvp_setup()
+	end
+end
+
+game.pvp_setup = function()
+	
+	game.spawn(5,5,1)
+	game.spawn(5,5,2)
+	
 end
 
 game.spawn = function(spike,bow,team,anim)
@@ -125,8 +131,7 @@ game.update = function(dt,fps,ticks)
 	game.screen1:blit(0,0)
 	game.screen2:blit(0,215)
 	
-	local x,y = evol.mouse()
-	--textwrap(font,tutorial[6][1],{20,20,evol.width-40,evol.height-40},nil,8,30)
+--	textwrap(font,tutorial[6][1],{20,20,evol.width-40,evol.height-40},nil,8,30)
 	
 	
 	-- fade
@@ -160,7 +165,6 @@ game.draw = function(shift,surf)
 end
 
 
-gind = nil
 game.keydown = function(key)
 	
 	if key == evol.key_1 then
@@ -183,11 +187,6 @@ game.keydown = function(key)
 		game.drummer2:hit(4)
 	end
 	
-	if key == evol.key_a then
-		print("fps:" .. FPS)
-		gind = next(patterns,gind)
-		game.drummer2:start_auto(gind,patterns[gind][1])
-	end
 end
 
 game.launch = function(action, team)
