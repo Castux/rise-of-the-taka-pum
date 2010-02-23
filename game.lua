@@ -126,7 +126,7 @@ game.update = function(dt,fps,ticks)
 	game.screen2:blit(0,215)
 	
 	local x,y = evol.mouse()
-	textwrap(font,"Hé falut les copains, ça va bien ? Moi oui, super !",x,y,150,100,{0,100,0})
+	--textwrap(font,tutorial[6][1],{20,20,evol.width-40,evol.height-40},nil,8,30)
 	
 	
 	-- fade
@@ -184,7 +184,7 @@ game.keydown = function(key)
 	end
 	
 	if key == evol.key_a then
-	
+		print("fps:" .. FPS)
 		gind = next(patterns,gind)
 		game.drummer2:start_auto(gind,patterns[gind][1])
 	end

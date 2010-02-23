@@ -162,6 +162,7 @@ function main()
 	while not quit do	
 		
 		local dt,fps,t = evol.timer()
+		FPS = fps
 		
 		evol.input {
 			gameMode.keydown
