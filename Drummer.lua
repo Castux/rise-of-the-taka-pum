@@ -35,7 +35,7 @@ function find_pattern(name)
 end
 
 beat = 0.5	-- sec per beat
-precision = 1/8
+precision = 1/6
 
 
 function Drummer:init(x,y,team)

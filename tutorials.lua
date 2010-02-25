@@ -74,3 +74,11 @@ tutorial[6] = {
 	{'spawn'},
 	[[Kiddo... There is hope after all! I believe in you! You truly are the new Mystical Pum-Taka-Tshh of the Heavenly Drums of Awesome, as foretold by... Oh whatever.]]
 }
+
+tutorial[7] = {
+	"You came a long way. But it is only the beginning of your journey. Here are a few protips. Keep an eye on your drums. If they vibrate, it means that the sequence of drums is correct, but not the rhythm. Take your time, keep the beat going. If after entering a pattern, nothing happens, well, it didn't exist. Wait a short instant and try again.",
+	"You can start entering a new command right after the previous one takes effect (or right when the drums start to vibrate), don't lose any time, keep the music flowing!",
+	"Miracles are long and difficult to perform, make sure your Taka-Pum are busy doing something before trying one. You can always come back to the training if you need too.",
+	"Well, it's all I know. The fate of the world is in your hand, etc, etc. Good luck!",
+	"Move Taka-Pum. For great justice!"
+}

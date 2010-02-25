@@ -39,6 +39,10 @@ function menu.keydown(key)
 			setGameMode(game, 'tut', 5)
 		elseif key == evol.key_8 then
 			setGameMode(game, 'tut', 6)
+		elseif key == evol.key_9 then
+			setGameMode(game, 'tut', 7)
+		else
+			menu.state = 'menu'
 		end
 	end
 end

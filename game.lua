@@ -33,6 +33,8 @@ game.init = function(mode,num)
 	game.fade_img.cx = 0
 	game.fade_img.cy = 0
 	
+	game.tut = nil
+	
 	if mode == 'solo' then
 		-- erm launch AI :P
 	elseif mode == 'versus' then
@@ -159,7 +161,7 @@ game.update = function(dt,fps,ticks)
 	end
 	
 
-	
+	print(#game.pons1,#game.pons2)
 	-- Winning condition
 	if not game.tut then
 		
