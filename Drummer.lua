@@ -51,7 +51,7 @@ function Drummer:init(x,y,team)
 
 	self:reset_pattern()	-- sets pattern, times & clock
 	
-	self.auto_clock = -1
+	self.auto_pattern = ""
 	
 	return self
 end
@@ -79,12 +79,18 @@ function Drummer:update(dt)
 		
 		if self.clock > self.times[#self.times]*beat + 1.75*beat then	-- timeout!
 			print("timeout")
+			
+			if game.tut and self == game.drummer1 then
+				game.drummer2:start_auto(game.tut_pattern,patterns[game.tut_pattern][1],-beat)
+			end
+					
 			self:reset_pattern()
 		end
 	end
 	
 	-- Auto stuff
-	if self.auto_clock >= 0 then
+
+	if #self.auto_pattern > 0 then
 		self.auto_clock = self.auto_clock + dt
 		
 		if self.auto_clock >= self.auto_times[1]*beat then
@@ -161,9 +167,19 @@ function Drummer:check_pattern()
 	if correct then
 		print ("Correct! " .. pattern[2])
 		game.launch(pattern[2], self.team)
+		
+		if game.tut and self == game.drummer1 and self.pattern == game.tut_pattern then
+			game.tut_ok = 1
+		end
 	else
 		print "Fail!"
 		self.fail_timer = 1
+	end
+	
+	-- tutorial case : launch auto repeat
+	if game.tut and self == game.drummer1 and not game.tut_ok then
+
+		game.drummer2:start_auto(game.tut_pattern,patterns[game.tut_pattern][1],-beat)
 	end
 	
 	-- reset
@@ -171,10 +187,10 @@ function Drummer:check_pattern()
 
 end
 
-function Drummer:start_auto(pat,times)
+function Drummer:start_auto(pat,times,delay)
 	
 	self.auto_pattern = pat
 	self.auto_times = copy(times)
 	
-	self.auto_clock = 0
+	self.auto_clock = delay or 0	-- give a certain delay
 end

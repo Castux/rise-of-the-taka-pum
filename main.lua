@@ -112,6 +112,9 @@ img = {
 	win2 = evol.loadImage("img/win2.png"),
 	
 	menu = evol.loadImage("img/menu.png"),
+	menutut = evol.loadImage("img/menu-tut.png"),
+	
+	tutbg = evol.loadImage("img/tutbg.png"),
 }
 
 img.ponspike11.cx = 17

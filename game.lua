@@ -5,7 +5,7 @@ require "tutorials"
 
 game = {}
 
-game.init = function(mode)
+game.init = function(mode,num)
 	
 	-- rendering crap
 	game.screen1 = evol.makeImage(700,215)
@@ -33,8 +33,12 @@ game.init = function(mode)
 	game.fade_img.cx = 0
 	game.fade_img.cy = 0
 	
-	if mode == 2 then
+	if mode == 'solo' then
+		-- erm launch AI :P
+	elseif mode == 'versus' then
 		game.pvp_setup()
+	elseif mode == 'tut' then
+		game.tut_setup(num)
 	end
 end
 
@@ -42,6 +46,19 @@ game.pvp_setup = function()
 	
 	game.spawn(5,5,1)
 	game.spawn(5,5,2)
+	
+end
+
+game.tut_setup = function(num)
+	
+	game.tut = tutorial[num]
+	game.tut_step = 1
+	
+	game.tut_pattern = nil
+	
+	game.bg = 1
+	
+	game.spawn(5,5,1)
 	
 end
 
@@ -73,6 +90,38 @@ game.spawn = function(spike,bow,team,anim)
 end
 
 game.update = function(dt,fps,ticks)
+	
+	-- update tutorial (before drummers for first pattern)
+	if game.tut and type(game.tut[game.tut_step]) == 'table' then
+		
+		-- if we just arrived in this "train" state
+		if not game.tut_pattern then
+			
+			-- first make sure drum2 has something to play	
+			game.tut_pattern = find_pattern(game.tut[game.tut_step][1])
+			
+			-- make a table of expected results
+			game.tut_expected = copy(game.tut[game.tut_step])
+		
+		
+		else
+			if game.tut_ok and game.tut_ok > 0 then
+				game.tut_ok = game.tut_ok - dt
+				
+				if game.tut_ok <= 0 then
+					game.tut_step = game.tut_step + 1
+					game.tut_pattern = nil
+					game.tut_ok = nil
+					
+					if game.tut_step > #game.tut then
+						setGameMode(menu,'tut')
+					end
+				end
+			end
+		
+		end
+
+	end
 	
 	-- Update every thing
 	
@@ -109,17 +158,22 @@ game.update = function(dt,fps,ticks)
 		end
 	end
 	
-	-- Winning condition
-	if not game.winner and #game.pons1 == 0 then
-		game.winner = 2
-		game.fade = 2
-		print "2 wins"
-	elseif not game.winner and #game.pons2 == 0 then
-		game.winner = 1
-		game.fade = 2
-		print "1 wins"
-	end
+
 	
+	-- Winning condition
+	if not game.tut then
+		
+		if not game.winner and #game.pons1 == 0 then
+			game.winner = 2
+			game.fade = 2
+			print "2 wins"
+		elseif not game.winner and #game.pons2 == 0 then
+			game.winner = 1
+			game.fade = 2
+			print "1 wins"
+		end
+	end
+		
 	-- Draw
 		
 	game.draw(0,game.screen1)
@@ -131,8 +185,20 @@ game.update = function(dt,fps,ticks)
 	game.screen1:blit(0,0)
 	game.screen2:blit(0,215)
 	
---	textwrap(font,tutorial[6][1],{20,20,evol.width-40,evol.height-40},nil,8,30)
-	
+	-- Draw tut
+	if game.tut and type(game.tut[game.tut_step]) == 'string' then
+		
+		--local col = {72,61,102}
+		local col = {47,41,51}
+		--local col = {153,0,0}
+		
+		local rect = {50,50,evol.width-100,evol.height-100}
+		
+		img.tutbg:blit()
+		
+		textwrap(font,game.tut[game.tut_step],rect,col,8,30)
+	end
+
 	
 	-- fade
 	if game.fade > 0 then
@@ -167,26 +233,35 @@ end
 
 game.keydown = function(key)
 	
-	if key == evol.key_1 then
-		game.drummer1:hit(1)
-	elseif key == evol.key_2 then
-		game.drummer1:hit(2)
-	elseif key == evol.key_3 then
-		game.drummer1:hit(3)
-	elseif key == evol.key_4 then
-		game.drummer1:hit(4)
-	end
+	if game.tut and type(game.tut[game.tut_step]) == 'string' then
+		
+		game.tut_step = game.tut_step + 1
+		if game.tut_step > #game.tut then
+			setGameMode(menu,'tut')
+		end
+		
+	else
 	
-	if key == evol.key_6 then
-		game.drummer2:hit(1)
-	elseif key == evol.key_7 then
-		game.drummer2:hit(2)
-	elseif key == evol.key_8 then
-		game.drummer2:hit(3)
-	elseif key == evol.key_9 then
-		game.drummer2:hit(4)
-	end
+		if key == evol.key_1 then
+			game.drummer1:hit(1)
+		elseif key == evol.key_2 then
+			game.drummer1:hit(2)
+		elseif key == evol.key_3 then
+			game.drummer1:hit(3)
+		elseif key == evol.key_4 then
+			game.drummer1:hit(4)
+		end
 	
+		if key == evol.key_7 then
+			game.drummer2:hit(1)
+		elseif key == evol.key_8 then
+			game.drummer2:hit(2)
+		elseif key == evol.key_9 then
+			game.drummer2:hit(3)
+		elseif key == evol.key_0 then
+			game.drummer2:hit(4)
+		end	
+	end
 end
 
 game.launch = function(action, team)

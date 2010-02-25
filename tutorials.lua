@@ -30,19 +30,38 @@ tutorial[2] = {
 }
 
 tutorial[3] = {
-	[[So. Sometimes, despite all your good will and efforts, your guys are gonna get their asses kicked. Then you might want to consider retirement. Heh. In your dreams. I meant "retreat". The retreat pattern is Pum-Pum. Go on, exercise the three orders you can give: Pum-Pum-Pum, Pum-Pum-Tshh, and Pum-Pum-Taka-Pum. The Spirit of the Ancient Mystical Pum-Taka-Tshh will correct you if you suck. He'll repeat the pattern even if you made it right, actually. If you want my opinion, I think he's a little wacko now. Tough job that is...]],
-	{'retreat','retreat-bow','retreat-spike'}
+	[[So. Sometimes, despite all your good will and efforts, your guys are gonna get their asses kicked. Then you might want to consider retirement. Heh. In your dreams. I meant "retreat". The retreat pattern is Pum-Pum. Go on, exercise the three orders you can give: Pum-Pum-Pum, Pum-Pum-Tshh and Pum-Pum-Taka-Pum. The Spirit of the Ancient Mystical Pum-Taka-Tshh will correct you if you suck. He's a cool guy. You know, despite being... dead.]],
+	[[Start with Pum-Pum-Pum.]],
+	{'retreat-spike'},
+	[[Good, now Pum-Pum-Tshh...]],
+	{'retreat-bow'},
+	[[Nice! Finally, Pum-Pum-Taka-Pum.]],
+	{'retreat'},
+	"Perfect! You can go on to the next lesson!"
 }
 
 tutorial[4] = {
 	[[Ha, finally, my favorite part! Ass kicking! Now that you can move your guys around, you have to give them the order to "attack". Yeah, even if the baddies are like just under their noses, they won't lift a finger. That's your job to tell them, kiddo. Or they'll just die. And it would be YOUR fault!]],
-	"The attack pattern is Pum-Tagada. But beware, it's getting a bit more complex. It's not regular anymore. Some drums will sound together. Listen very carefully to the Ancient to learn the rhythm. If you've got half a brain more than a Tshh, you will have guessed the patterns: Pum-Tagada-Pum, Pum-Tagada -Tshh and Pum-Tagada-Taka-Pum. Take your time, and you're going to be fine. We hope. Oh and yeah again, beware of Tshh friendly fire.",
-	{'attack','attack-bow','attack-spike'}
+	"The attack pattern is Pum-Tagada. But beware, it's getting a bit more complex. It's not regular anymore. Some drums will sound together. Listen very carefully to the Ancient to learn the rhythm. If you've got half a brain more than a Tshh, you will have guessed the patterns: Pum-Tagada-Pum, Pum-Tagada-Tshh and Pum-Tagada-Taka-Pum. Take your time, and you're going to be fine. We hope. Oh and yeah again, beware of Tshh friendly fire.",
+	"Try Pum-Tagada-Pum first.",
+	{'attack-spike'},
+	"Then Pum-Tagada-Tshh...",
+	{'attack-bow'},
+	"Aaaand, Pum-Tagada-Taka-Pum!",
+	{'attack'},
+	"Good! Now you have the huge powers of an army of zealous fanatics at your finger tips. Ain't that great? Go on to the next lesson, for more awesomeness!"
 }
 
 tutorial[5] = {
-	[[If you made it here, it means you're already quite able to lead your troopers. Sometimes, when the shitstorm hits hard, your guys won't have time to retreat. Then your last resort is "protect". At your signal, your Taka-Pum soldiers will present their Absolute and Unbeatable Shields of Yeepee. As the name implies, they are perfectly safe. No arrow or pike will go through. Pretty handy. Of course after a while, the Taka-Pum will forget why they were there and go back to being useless sitting ducks in the middle of the battlefield. The pattern is Pum-Tagada-Tagada. Train a bit to play Pum-Tagada-Tagada-Pum, Pum-Tagada-Tagada-Tshh and Pum-Tagada-Tagada-Taka-Pum.]],
-	{'protect','protect-bow','protect-spike'}
+	[[If you made it here, it means you're already quite able to lead your troopers. Sometimes, when the shitstorm hits hard, your guys won't have time to retreat. Then your last resort is "protect". At your signal, your Taka-Pum soldiers will present their Absolute and Unbeatable Shields of Yeepee. As the name implies, they are perfectly safe. No arrow or pike will go through. Pretty handy.]],
+	[[Of course after a while, the Taka-Pum will forget why they were there and go back to being useless sitting ducks in the middle of the battlefield. The pattern is Pum-Tagada-Tagada.]],
+	"Train a bit to play Pum-Tagada-Tagada-Pum...",
+	{'protect-spike'},
+	"Pum-Tagada-Tagada-Tshh...",
+	{'protect-bow'},
+	"And Pum-Tagada-Tagada-Taka-Pum.",
+	{'protect'},
+	"Excellent! Now your Taka-Pum can feel safe in combat. In a manner of speaking..."
 }
 
 tutorial[6] = {
